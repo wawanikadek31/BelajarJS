@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi String Dan Number</title>
+</head>
+<body>
+    <script>
+        document.writeln(`<p> Konversi </p>`);
+        let value1 = parseInt("1"); // Konversi String ke Number
+        let value2 = 1;
+        let sum = value1 + value2;
+        
+        document.writeln(`<p> ${parseInt("1.1")} </p>`); //konversi string ke number
+        document.writeln(`<p> ${parseFloat("1.1")} </p>`); // konversi string ke number bilangan pecahan
+        document.writeln(`<p> ${Number("1.1")} </p>`); // konversi string ke number bilangan pecahan ataupun bilangan bulat
+
+        // konversi number ke string
+
+        let a = 1;
+        let b = 2;
+        let total = a.toString() + b.toString(); // hasilnya 12 karena tidak berupa number melainkan konversi ke string
+        document.writeln(`<p> ${total} </p>`)
+
+
+        // kode NaN
+        document.writeln(`<p> Kode NaN </p>`);
+        document.writeln(`<p> ${parseInt("Salah")} </p>`); // NaN
+        document.writeln(`<p> ${parseFloat("1.1Text")} </p>`); // Hasilnya tetep 1.1 karena yang di awal di eksekusi
+
+        // Number() tidak akan mentolelir kesalahan pada data
+        document.writeln(`<p> ${Number("1.1ups")} </p>`); //NaN
+        document.writeln(`<p> ${Number("1x")} </p>`); // NaN
+        document.writeln(`<p> ${Number("Bukan Number")} </p>`); // NaN
+
+
+        // isNaN()
+        document.writeln(`<p> Kode isNaN </p>`);
+        let first = Number("salah"); //NaN
+        let totalNumber = first + 100;
+        document.writeln(`<p> ${totalNumber} </p>`);
+        document.writeln(`<p> ${isNaN(first)} </p>`); // true karena dia NaN
+        document.writeln(`<p> ${isNaN(100)} </p>`); // false karena dia bukan NaN
+    </script>
+</body>
+</html>

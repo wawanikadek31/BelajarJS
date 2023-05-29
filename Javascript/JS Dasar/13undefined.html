@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undefined</title>
+</head>
+<body>
+    <script>
+        let nama = 23;
+        if (nama === undefined) { // undefined adalah nilai yang belum berisi nilai
+            alert('Undefined');
+        }else{
+            alert('Defined');
+        }
+
+        // undefined array value
+
+        let names = ['wawan','eko','kurniawan','budi'];
+
+        if (names[3] === undefined ) {
+            alert('array undefined');
+        } else {
+            alert(`Hello ${names[2]}`)
+        }
+        
+            // undefined object value
+
+            let person = {
+                name: 'wawan'
+            };
+            if (person.name === undefined) {
+                alert('Object Undefined');
+            } else {
+                alert(`Object defined ${person.name}`);
+            }
+    </script>
+</body>
+</html>

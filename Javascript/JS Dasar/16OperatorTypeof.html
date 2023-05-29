@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Typeof</title>
+</head>
+<body>
+    <script>
+        let data = 1; // setiap memasukan tipe data maka typeof akan mengecek type datanya
+        if (typeof data === 'number') {
+            alert('number')
+        } else if (typeof data === 'string') {
+            alert('string')
+        }else if (typeof data === 'boolean') {
+            alert('boolean')
+        }else if (typeof data === 'object') {
+            alert('object')
+        }else{
+            alert('typeof yang anda masukan salah')
+        }
+
+        // cara mudah menggunakan typeof
+
+        let typeData = typeof data;
+        document.writeln(`<p> ${typeData}`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PopUp</title>
+</head>
+<body>
+    <script>
+        // Alert memberikan peringatan berupa popup
+        alert('Semangat Belajarnya demi masa depan')
+
+        // prompt meminta inputan
+        let nama = prompt('Masukan nilai yang anda inginkan')
+        alert(`Helo ${nama}`)
+
+        // confirm memberikan confirmasi lagi
+        let masuk = confirm(`Apakah Anda ingin lagi?`);
+        if (masuk) {
+            let nama = prompt('Siapa Nama Anda??');
+            alert(`Hello ${nama}`);
+        }else{
+            alert('Bye - Bye')
+        }
+    </script>
+</body>
+</html>

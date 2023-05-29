@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Aritmatika</title>
+</head>
+<body>
+    <script>
+        // contoh A Operator Aritmatika
+        document.writeln('Contoh Operator Aritmatika');
+        let result = 1 + 2;
+        document.writeln(`<p> 1 + 2 = ${result} </p>`);
+        let originalResult = result;
+
+        result = result - 1;
+        document.writeln('<p>' + originalResult + "- 1 = " + result +  '</p>');
+        originalResult = result;
+
+        result = result * 2;
+        document.writeln('<p>' + originalResult + "*2 = " + result +  '</p>');
+        originalResult = result;
+
+        // Contoh B Operator Augmented Assigment
+        document.writeln('Contoh Augmented Assigment');
+        let hasil = 1 + 2;
+        document.writeln(`<p> 1 + 2 = ${hasil} </p>`);
+        let originalhasil = hasil;
+
+        hasil-=1;
+        document.writeln('<p>' + originalhasil + "- 1 = " + hasil +  '</p>');
+        originalhasil = hasil;
+
+        hasil*=2;
+        document.writeln('<p>' + originalhasil + "*2 = " + hasil +  '</p>');
+        originalhasil = hasil;
+
+        // contoh C Operator Unary
+        document.writeln('Contoh Operator Unary');
+        let hasilResult = +1; // nilai awal 1
+        document.writeln('<p>' +hasilResult + '</p>');
+        hasilResult--; // nilai di turunkan menjadi 0
+        document.writeln('<p>' +hasilResult + '</p>');
+        hasilResult++; // nilai dari 0 di naikan menjadi 1
+        document.writeln('<p>' +hasilResult + '</p>')
+        hasilResult = -hasilResult; // nilai 0 di kurangkan
+        document.writeln('<p>' +hasilResult + '</p>');
+
+        document.writeln("</br>");
+
+        // Contoh D Operator Perbandingan
+        document.writeln('Contoh Operator Perbandingan');
+        let resultHasil = 5 == "5";
+        document.writeln('<p>' + resultHasil + '</p>'); // true
+        resultHasil = 5 === "5";
+        document.writeln('<p>' + resultHasil + '</p>'); // false
+        resultHasil = 5 != "5";
+        document.writeln('<p>' + resultHasil + '</p>'); // false
+        resultHasil = 5 !== "5";
+        document.writeln('<p>' + resultHasil + '</p>'); // true
+        resultHasil = 5 > 10;
+        document.writeln('<p>' + resultHasil + '</p>'); // false
+        resultHasil = 5 < 10;
+        document.writeln('<p>' + resultHasil + '</p>'); // true
+
+        
+        // Contoh D Operator Logika
+        document.writeln('Contoh Operator Logika');
+
+        // menggunakan &&
+        let nilaiUjian = 70;
+        let nilaiAbsensi = 80;
+
+        let lulusUjian = nilaiUjian > 75; // jika 70 (false) Jika 80 (true) 
+        let lulusAbsensi = nilaiAbsensi > 75; // 70 (false) jika 80 (true)
+
+        let lulus = lulusUjian && lulusAbsensi;
+        document.writeln('<p>'+ lulus + '</p>'); //Tidak Luluus Ujian 70 (FALSE) // tidak lulus ujian 80 (false)
+
+
+        // menggunakan ||
+        let luluss = lulusUjian || lulusAbsensi;
+        document.writeln('<p>'+ luluss + '</p>'); // Luluus Ujian 70 (FALSE) //  lulus ujian 80 (false)
+    </script>
+</body>
+</html>

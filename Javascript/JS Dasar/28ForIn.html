@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For In</title>
+</head>
+<body>
+    <script>
+        // For In Direkomendasikan kepada object bukan array
+
+        let person = {
+            firstName: 'I',
+            middleName: 'Kadek',
+            lastName: 'Wawan'
+        };
+
+        for (let property in person) {
+            document.writeln(`<p> Property ${property} : ${person[property]}`)
+        }
+
+
+        // for in untuk array tapi tidak di rekomendasikan karena array menggunakan for of
+
+        let names = ['wawan','kadek','rio','roi'];
+        for(let index in names){
+            document.writeln(`<p> index ${index} : ${names[index]}`)
+        }
+    </script>
+</body>
+</html>

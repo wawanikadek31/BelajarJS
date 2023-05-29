@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Function</title>
+</head>
+<body>
+    <script>
+        function* createNames() {
+            yield "Kadek";
+            yield "Wawan";
+            yield "Budi";
+        }
+        let names = createNames();
+        for (const name of names) {
+            console.log(`${name}`);
+        }
+        
+        // function generator kompleks (lazy)
+
+        function* buatGanjil(value) {
+            for (let i = 1; i <= value; i++) {
+                if (i % 2 === 1) {
+                    console.log(`yield ${i}`)
+                    yield i;
+                }
+            }
+        }
+        const angkaGanjil = buatGanjil(100);
+        for (const angka of angkaGanjil) {
+            console.log(angka);
+        }
+
+        // menggunakan array (eager)
+        function buatGanjilArray(value) {
+            let result = []
+            for (let i = 1; i <= value; i++) {
+                if (i % 2 === 1) {
+                    console.log(`yield ${i}`)
+                    result.push(i);
+                }
+            }
+            return result;
+        }
+        const angkaGanjil1 = buatGanjilArray(100);
+        for (const angka1 of angkaGanjil1) {
+            console.log(angka1);
+        }
+
+        // generator Lazy
+        function* buatGanjil2(value) {
+            for (let i = 1; i <= value; i++) {
+                if (i % 2 === 1) {
+                    console.log(`yield ${i}`)
+                    yield i;
+                }
+            }
+        }
+        const numbers = buatGanjil(100);
+        console.log(numbers.next().value);
+        console.log(numbers.next().value);
+        console.log(numbers.next().value);
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Objec</title>
+</head>
+<body>
+    <script>
+        // Membuat object
+        let orang = {};
+
+        // menambahkan data object
+        orang['nama'] = 'wawan';
+        orang['alamat'] = 'karangasem';
+        orang['umur'] = '22';
+        console.table(orang);
+
+        // menghapus data object
+        delete orang['umur'];
+        console.table(orang);
+
+        // menambah object yang di hapus
+        orang['umur'] = 23;
+        console.table(orang);
+
+        // Membuat object dengan properties
+        let user = {
+            nama : 'I Kadek Wawan',
+            pekerjaan : 'Staff Shoes Shop ID',
+            umur : 23,
+            alamat : {
+                jalan : 'karangasem',
+                kota : 'bugbug',
+            }
+        }
+        console.table(user);
+
+        // mengakses property satu persatu
+        console.log(`Nama : ${user.nama}`);
+        console.log(`alamat : ${user.alamat.jalan}`);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Method</title>
+</head>
+<body>
+    <script>
+        // method Object
+        let person = {
+            name: 'Wawan',
+            sayHello: function (name) { // function dalam object disebut method object
+                alert(`Hello ${name}`)
+            }
+        };
+
+        alert(person.name);
+        person.sayHello("Budi");
+
+        // membuat function sebagai object method
+
+        function sayHello1(name1) {
+            alert(`Hello ${name1}`)
+        }
+        let person1 = {
+            name1: 'Wawan',
+            sayHello: sayHello1
+        };
+        person1.sayHello("Kadek");
+    </script>
+</body>
+</html>

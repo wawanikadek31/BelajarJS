@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <script>
+        // memanggil function
+        function sayHelloWord() {
+            document.writeln('<p> Hello World')
+        }
+
+    // memanggil  Function
+    sayHelloWord();
+    sayHelloWord(); // Boleh berkali-kali
+
+
+    // function parameter
+    function sayHello(firstName,lastName) {
+        document.writeln(`<p> Hello ${firstName} ${lastName}`)
+    }
+    // memanggil function parameter
+    sayHello('wawan','kadek');
+    sayHello('kadek','Wawan');
+
+    // function retur value
+    function sayHello1(firstName,lastName) {
+        let say = `Hello ${firstName} ${lastName}`;
+        return say;
+    }
+    // memanggil function dan menangkap return value
+    let result = sayHello1('budi','nugraha');
+    document.writeln(`<p> ${result}`);
+
+
+    // Function return value lebih dari satu menggunakan if statement
+    function getFinalScore(value) {
+        if (value >= 90) {
+            return "A";
+        }else if (value >= 80) {
+            return "B"
+        }else if (value >= 70) {
+            return "C"
+        }else if (value >= 60) {
+            return "D"
+        }else {
+            return "E"
+        }
+    }
+    hasil = getFinalScore(prompt('Masukan Nilai Yang Diinginkan !!!'));
+    document.writeln(`<p> ${hasil}`)
+
+    // menghentikan eksekusi dengan return
+
+    function isContains(array, searchValue) {
+        for (const element of array) {
+            if (element === searchValue) {
+                return true;
+            }
+        }
+        return false;
+    }
+    document.writeln(`<p> ${isContains([1,2,3,5,4,6,7,8,9,10],5)}`);
+    </script>
+</body>
+</html>

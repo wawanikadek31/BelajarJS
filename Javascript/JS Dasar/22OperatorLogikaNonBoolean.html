@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logika Non Boolean</title>
+</head>
+<body>
+    <script>
+        // menggunakan Operator OR (||) yaitu mengambil data yang truthy
+        console.log('Hello' || ''); // Hello
+        console.log('' || []); // []
+        console.log('0' || 'NOL'); // "0"
+        console.log(0 || 'NOL'); // NOL
+        console.log(null || 'NULL'); // NULL
+        console.log(undefined || 'UNDEFINED'); // UNDEFINED
+        console.log(0 || false);
+
+        let person = {
+            firstName:'I Kadek',
+            lastName: 'Wawan'
+        }
+        let nama = person.firstName || person.lastName;
+        console.log(nama);
+        nama = person.middleName || person.lastName;
+        console.log(nama);
+
+
+        // menggunakan Operator AND (&&) Yaitu mengambil data yang falsy
+        console.log('Hello' && ''); // Hello
+        console.log('' && []); // []
+        console.log('0' && 'NOL'); // "0"
+        console.log(0 && 'NOL'); // NOL
+        console.log(null && 'NULL'); // NULL
+        console.log(undefined && 'UNDEFINED'); // UNDEFINED
+        console.log(0 && false);
+
+        let person1 = {
+            firstName:'I Kadek',
+            lastName: 'Wawan',
+        }
+        let nama1 = person.firstName && person.lastName;
+        console.log(nama1);
+        nama1 = person.middleName && person.lastName;
+        console.log(nama1);
+
+    </script>
+</body>
+</html>

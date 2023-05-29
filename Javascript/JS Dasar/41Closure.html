@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body>
+    <script>
+        function createAdder(value) {
+            let owner = 'Wawan';
+            function add(param) {
+                console.log(owner);
+                return value + param;
+            }
+            return add;
+        }
+        let addTwo = createAdder(2);
+        // function addTwo(param) {
+        //     console.log('Wawan');
+        //     return 2 + param;
+        // } seakan addTwo seperti function ini
+        
+        console.log(addTwo(10));
+        console.log(addTwo(20));
+    </script>
+</body>
+</html>

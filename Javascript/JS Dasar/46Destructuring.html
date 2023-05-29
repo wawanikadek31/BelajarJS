@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <script>
+       {
+
+         // Mengambil daya  di array satu persatu
+         let names = ['wawan','kadek','eko','budi','dode'];
+        let firstName = names[0];
+        let middleName = names[1];
+        let lastName = names[2];
+
+        console.log(firstName);
+        console.log(middleName);
+        console.log(lastName);
+        
+
+        // desctructuring array
+
+        [firstName,middleName,lastName, ...lain] = names ;
+        console.log(firstName);
+        console.log(middleName);
+        console.log(lastName);
+        console.log(lain);
+
+
+
+       }
+        
+       {
+        // desctructuring di Object
+        let person = {
+            firstName1: 'jaya',
+            lastName1:'negara',
+            address: {
+                street: 'Jalan Belum Ada',
+                city: 'Bali',
+                country: 'Indonesia'
+            },
+            hobby : 'ngoding',
+            channel: 'Kawan Channel'
+        };
+        // satu persatu
+        // let firstName1 = person.firstName1;
+        // let lastName1 = person.lastName1;
+        // console.log(firstName1);
+        // console.log(lastName1);
+        // console.log(person.address.street);
+
+        // destructuring object
+       let {firstName1,lastName1,address, ...others} = person;
+       console.log(firstName1);
+       console.log(lastName1);
+       console.log(address);
+       console.log(others);
+       }
+
+       {
+        // destructuring nested function
+        let person = {
+            firstName1: 'jaya',
+            lastName1:'negara',
+            address: {
+                street: 'Jalan Belum Ada',
+                city: 'Bali',
+                country: 'Indonesia'
+            },
+            hobby : 'ngoding',
+            channel: 'Kawan Channel'
+        };
+
+        // destructuring object
+       let {firstName1,lastName1,address:{city,street,country}, ...others} = person;
+       console.log(firstName1);
+       console.log(lastName1);
+       console.log(city);
+       console.log(others);
+       }
+
+       {
+
+        // Destructuring Function Parameter (1)
+
+        function displayPerson({firstName,middleName,lastName}) {
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+        }
+        let person = {
+            firstName: 'abdi',
+            middleName: 'budi',
+            lastName:'nugroho'
+            
+        }
+        displayPerson(person);
+
+
+        // Destructuring Function Parameter (2)
+
+        function sum([first,second]) {
+            return first + second;
+        }
+        console.log(sum([10,10])); // 20
+        console.log(sum([20,10])); // 30
+       }
+
+       {
+        // Default Value array
+        let names = ['susanto','susanti','wawan'];
+        let [firstName,middleName,lastName = 'Jarjit'] = names;
+
+        console.log(firstName);
+        console.log(middleName);
+        console.log(lastName);
+
+
+        // Default Value Object
+        let person = {
+            firstName1: 'kawan',
+            lastName1:'sukarto'
+        }
+        let {firstName1,middleName1='ijat',lastName1 = 'Jarjit'} = person;
+        console.log(firstName1)
+        console.log(middleName1)
+        console.log(lastName1)
+        
+       }
+
+       {
+        // menggunakan nama variable lain
+        let person = {
+            firstName1: 'kawan',
+            middleName1:'Kepa',
+            lastName1:'sukarto'
+        }
+        let {firstName1:namaDepan,
+            middleName1:NamaTengah ='ijat',
+            lastName1: namaTerakhir = 'Jarjit'} = person;
+        console.log(namaDepan)
+        console.log(NamaTengah)
+        console.log(namaTerakhir)
+       }
+    </script>
+</body>
+</html>
