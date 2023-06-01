@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Error Manual</title>
+</head>
+<body>
+    <script>
+        class ValidationError extends Error{
+            constructor(message,field){
+                super(message);
+                this.field = field;
+            }
+        }
+        class MathUtil{
+            static sum (...numbers){
+                if(numbers.length === 0){
+                    throw new ValidationError('Total Parameter Harus Lebih Dari 0',"field numbers");
+                }
+                let result = 0;
+                for (const number of numbers) {
+                    result += number;
+                }
+                return result;
+            }
+        }
+        try{
+            console.log(MathUtil.sum(1,1,1,1));
+            console.log("Kode Block Try akan berhenti");
+        }catch(error){
+            if (error instanceof ValidationError) {
+                console.error(`Terjadi Eror di field ${error.field}, dengan error ${error.message}`);
+            } else {
+                console.error(`Terjadi Eror ${error.message}`);
+            }
+           
+        }finally{
+            console.log('Kode Program Selesai');
+        }
+        console.log('I Kadek Wawan');
+    </script>
+</body>
+</html>

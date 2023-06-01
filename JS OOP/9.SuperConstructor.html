@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Constructor</title>
+</head>
+<body>
+    <script>
+        // super constructor
+        class Employee{
+            constructor(firstName){
+                this.firstName = firstName;
+            }
+            sayHello(name){
+                console.log(`Hi ${name}, my name is ${this.firstName}`);
+            }
+        }
+        class Manager extends Employee {
+            constructor(firstName,lastName){
+                super(firstName);
+                this.lastName = lastName;
+            }
+           sayHello(name){
+            console.log(`Hi ${name}, my name Manager ${this.firstName} ${this.lastName}`);
+           }
+        }
+        const kadek = new Employee('santoso');
+         kadek.sayHello('Budi');
+         
+         const krisma = new Manager('krisma','nodi');
+         krisma.sayHello('diantini');
+
+
+        //  super method
+        class Shape{
+            paint(){
+                console.log('Paint Shape');
+            }
+        }
+        class Circle extends Shape {
+            paint(){  super.paint(); // memanggil paint methon parents class
+                console.log('Paint circle');
+              
+            }
+        }
+        const circle = new Circle();
+        circle.paint();
+    </script>
+</body>
+</html>
