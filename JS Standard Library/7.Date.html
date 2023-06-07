@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+</head>
+<body>
+    <script>
+        const date1 = new Date(); // membuat date
+        console.log(date1);
+
+        const date2 = new Date(2020, 10, 10); // year month date
+        console.log(date2);
+
+        const date3 = new Date(2020, 10, 10, 16,15,9,123); // year month date hour minute second milis
+        console.log(date3);
+
+        const date4 = new Date(1686105573436);
+        console.log(date4);
+
+        // unix timestamp
+        const timestamp= Date.now();
+        console.log(timestamp);
+
+        const dateUnix = new Date(timestamp);
+        console.log(dateUnix);
+
+        console.log(dateUnix.getTime());
+        console.log(dateUnix.getDay());
+
+
+        // parsing date
+        const parseTimestamp = Date.parse("2020-12-18T10:10:10.123+07:00");
+        console.log(parseTimestamp);
+
+        const parseDate = new Date(parseTimestamp);
+        console.log(parseDate);
+
+        // date get dan setter
+        const date = new Date();
+        date.setFullYear(2020);
+
+        console.log(date.getFullYear());
+        console.log(date.getMonth());
+        console.log(date.getDate());
+        console.log(date.getHours());
+        console.log(date.getMinutes());
+        console.log(date.getSeconds());
+        console.log(date.getMilliseconds());
+        console.log(date.getTimezoneOffset());
+    </script>
+</body>
+</html>

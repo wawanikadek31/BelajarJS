@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        const person = {
+            firstName : "Wawan",
+            lastName : 'Kadek'
+        }
+        Object.freeze(person);
+
+        person.firstName = "Di ubah"; // tidak berubah
+        delete person.firstName; // tidak berubah
+        console.log(person);
+
+        
+        Object.seal(person);
+
+        person.firstName = "Di ubah"; // berubah
+        delete person.lastName; // tidak berubah
+        console.log(person);
+
+
+        // object assign
+        const target = {firstName : "Budi"};
+        const source = {lastName: "Anduk"};
+
+        Object.assign(target,source);
+        console.log(target);
+
+
+        // object property name dan value
+        const person1 = {
+            firstName : "Wawan",
+            lastName : 'Kadek'
+        }
+        console.log(Object.values(person1)); // mengambil value
+        console.log(Object.getOwnPropertyNames(person1)); // mengambil property
+    </script>
+</body>
+</html>

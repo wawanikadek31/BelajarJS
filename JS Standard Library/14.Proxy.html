@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proxy</title>
+</head>
+<body>
+    <script>
+        // membuat handler
+
+        const target = {};
+        const handler= {
+            get: function(target,property) {
+                return target[property]
+            },
+            Set : function (target, property, value) {
+                target[property] = value;
+            }
+    }
+    const proxy = new Proxy(target,handler);
+    proxy.firstName = 'I';
+    proxy.middleName = 'Kadek';
+    proxy.lastName = 'Wawan';
+
+    console.log(proxy.firstName);
+    console.log(proxy.middleName);
+    console.log(proxy.lastName);
+    
+
+    // log handler
+    {const handler = {
+        get: function(target,property) {
+            console.log(`access property ${property}`);  
+                return target[property];
+            },
+            Set : function (target, property, value) {
+                console.log(`change propery ${property} : ${value}`);
+                target[property] = value;
+            }
+    }
+    const proxy = new Proxy(target,handler);
+    proxy.firstName = 'I';
+    proxy.middleName = 'Kadek';
+    proxy.lastName = 'Wawan';
+
+    console.log(proxy.firstName);
+    console.log(proxy.middleName);
+    console.log(proxy.lastName);
+    }
+    </script>
+</body>
+</html>

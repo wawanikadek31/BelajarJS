@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        // foreach loop 
+        const array = ['Wawan','Budi','Kurniawan'];
+
+        array.forEach(function (value,index) {
+            console.log(`${index} : ${value}`);
+        });
+
+        array.forEach((value,index) => console.log(`${index} : ${value}`));
+        array.forEach(value => console.log(value));
+
+        // array queue atau antrian
+        // push menambahh data paling belakang
+        const queue = [];
+
+        queue.push('Wawan');
+        queue.push('budi');
+        queue.push('Eka');
+        
+        // shift untuk mengambil dan menghapus data paling depan
+        console.log(queue.shift());
+        console.log(queue.shift());
+        console.log(queue.shift());
+
+        // array stack (tumpukan);
+         const stack = [];
+
+        stack.push('komang');
+        stack.push('Krisma');
+        stack.push('nodiantini');
+
+        console.log(stack.pop());
+
+
+        // array search
+
+        const source = [1,2,3,4,5,1,2,3,4,5];
+
+        console.log(source.find(value => value > 3 ));// hasil 4
+        console.log(source.findIndex(value => value > 3 ));// hasil 3
+        console.log(source.includes(7));// hasil false
+        console.log(source.indexOf(5));// hasil 4
+        console.log(source.lastIndexOf(5));// hasil 9
+
+        // array filter
+        const number = [1,2,3,4,5,6,7,8,9,10];
+        console.log(number.filter(value => value % 2 == 1));
+        console.log(number.filter(value => value % 2 == 0));
+
+        // array transform
+        const names = "Eko wawan budi joko".split(" ");
+        console.log(names.map(value => value.toUpperCase()));
+        
+        const numbers = [1,2,3,4,5,6,7,8,9,10];
+        console.log(numbers.reduce((result, value) => result + value ));
+        console.log(numbers.reduceRight((result, value) => result + value ));
+        
+    </script>
+</body>
+</html>

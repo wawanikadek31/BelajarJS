@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encode</title>
+</head>
+<body>
+    <script>
+        // encode url dan decode url
+        const url = 'https://www.contoh.com/?name=Eko Kurniawan Khannedy';
+        console.log(url);
+
+        const encoded = encodeURI(url);
+        console.log(encoded);
+
+        const decoded = decodeURI(url);
+        console.log(decoded);
+
+        // encodeurlcomponent dan decodeurlcomponent
+        const value = 'kadek&wawan=made';
+        const url1 = 'http://www.contoh.com/?name=';
+
+        const encoded1 = encodeURIComponent(value);
+        console.log(url + encoded);
+
+        const decoded1 = decodeURIComponent(encoded1);
+        console.log(url + decoded);
+    </script>
+</body>
+</html>

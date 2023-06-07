@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reg Exp (reguler expression)</title>
+</head>
+<body>
+    <script>
+        // create regex
+        const regex1 = /wawan/
+        const regex2 = new RegExp('wawan');
+        const regex3 = new RegExp(/wawan/);
+
+
+       {
+         // regexp instance method
+         const name ='i kadek wawan';
+        const regex= /wawan/;
+
+        let result = regex.exec(name);
+        console.log(result);
+
+        let test = regex.test(name);
+        console.log(test);
+       }
+    </script>
+</body>
+</html>
